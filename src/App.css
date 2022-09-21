@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+body, h2, h3, p {
+    margin: 0
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-white {
+   color: #EDEDED;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.text-light-gray {
+    color: #A4A4A4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Oxford-Blue {
+    color: #1B2A41;
 }
 
-.App-link {
-  color: #61dafb;
+.text-gray {
+    color: #494949;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.text-md {
+    font-size: 24px;
+}
+.text-lg{
+    font-size: 25px;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.margin-t-40 {
+    margin-top: 40px;
+}
+
+.margin-y-20 {
+    margin: 20px 0px;
+}
+
+.profile-body-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #494949;
+}
+
+
+
+.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.profile-header {
+    background-color: #1B2A41;
+    padding: 20px;
+}
+
+.profile-body {
+    background-color: #111B2A;
+    padding: 20px;
+}
+
+.profile-container {
+    width: 25%;
+}
+
+.vender-container {
+    width: 75%;
+    /* padding: 20px; */
+}
+
+.vender-container {
+    background-color: #f4f4f4;
+}
+
+.venter-container-header {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #EDEDED;
+}
+
+
+.left-div{
+    width: 30%;
+    text-align: center;
+    border-right: 2px solid #EDEDED;
+    padding-top: 20px;
+}
+
+.right-div {
+    width: 35%;
+    padding-left: 40px;
+    margin: 20px 20px ;
+}
+
+.right-subdiv {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+table {
+    width: 100%;
+}
+
+th {
+    padding: 20px 0px;
+    color: gray;
+    background-color: #EDEDED;
+    text-align: left;
+    padding: 10px 15px ;
+}
+
+td{
+    padding: 15px 0px;
+    border-bottom: 1px solid #EDEDED;
+    padding: 15px 15px;
+    font-weight: 600;
+}
+
+td:first-child {
+    color: gray
 }
