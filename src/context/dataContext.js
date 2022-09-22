@@ -167,6 +167,7 @@ const reducer = (state, action) => {
         ~~item.id === ~~action.payload.venderId
           ? {
               ...item,
+              date: action.payload.elements.date,
               cabin: action.payload.elements.cabin,
               disruption: action.payload.elements.disruption,
               pnr: action.payload.elements.pnr,
@@ -186,6 +187,7 @@ const reducer = (state, action) => {
               return applicant.id === action.payload.applicantId
                 ? {
                     ...applicant,
+                    date: action.payload.elements.date,
                     cabin: action.payload.elements.cabin,
                     disruption: action.payload.elements.disruption,
                     pnr: action.payload.elements.pnr,

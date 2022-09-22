@@ -17,6 +17,9 @@ export default function VendersData() {
   const onVenderSubmit = (data) => {
     const venderId = Object.keys(data)[0].split('-')[0];
     let elements = {
+      date: `${data[`${venderId}-date`].split('-')[2]}.${
+        data[`${venderId}-date`].split('-')[1]
+      }.${data[`${venderId}-date`].split('-')[0]}`,
       cabin: data[`${venderId}-cabin`],
       disruption: data[`${venderId}-disruption`],
       pnr: data[`${venderId}-pnr`],
@@ -36,6 +39,9 @@ export default function VendersData() {
     const applicantId = Object.keys(data)[0].split('-')[0];
     const venderIndex = Object.keys(data)[0].split('-')[1];
     let elements = {
+      date: `${data[`${applicantId}-${venderIndex}-date`].split('-')[2]}.${
+        data[`${applicantId}-${venderIndex}-date`].split('-')[1]
+      }.${data[`${applicantId}-${venderIndex}-date`].split('-')[0]}`,
       cabin: data[`${applicantId}-${venderIndex}-cabin`],
       disruption: data[`${applicantId}-${venderIndex}-disruption`],
       pnr: data[`${applicantId}-${venderIndex}-pnr`],

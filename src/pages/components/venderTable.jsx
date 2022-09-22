@@ -37,7 +37,20 @@ export default function VenderTable({
                   setSelectedVender(item.id);
                 }}
               >
-                {item?.date}
+                {!isEditOn || selectedVender !== item.id ? (
+                  item.date
+                ) : (
+                  <div>
+                    <Controller
+                      control={control}
+                      defaultValue={`${item.date.split('.')[2]}-${
+                        item.date.split('.')[1]
+                      }-${item.date.split('.')[0]}`}
+                      name={`${selectedVender}-date`}
+                      render={({ field }) => <input {...field} type="date" />}
+                    />
+                  </div>
+                )}
               </td>
               <td
                 colSpan={2}
@@ -208,21 +221,23 @@ export default function VenderTable({
                           : ''
                       } selected-border`}
                     >
-                      {person?.date}
-                      {/* {!isApplicantEditOn || selectedApplicant !== person.id ? (
+                      {/* {person?.date} */}
+                      {!isApplicantEditOn || selectedApplicant !== person.id ? (
                         person?.date
                       ) : (
                         <div>
                           <Controller
-                            control={control}
-                            defaultValue={person?.date}
+                            control={control2}
+                            defaultValue={`${person.date.split('.')[2]}-${
+                              person.date.split('.')[1]
+                            }-${person.date.split('.')[0]}`}
                             name={`${selectedApplicant}-${venderIndex}-date`}
                             render={({ field }) => (
-                              <input {...field} type="text" />
+                              <input {...field} type="date" />
                             )}
                           />
                         </div>
-                      )} */}
+                      )}
                     </td>
                     <td
                       className={`${
